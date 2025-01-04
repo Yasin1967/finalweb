@@ -1,0 +1,13 @@
+# IDE dosyaları
+.vscode/
+.idea/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Node modülleri (eğer varsa)
+node_modules/
+
+# Yapılandırma dosyaları
+*.env 

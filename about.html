@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hakkımda - Yasin Düzgün</title>
+    <link rel="icon" href="img/yed.ico" type="image/x-icon" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/aos.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status">
+        <div
+          class="preloader"
+          aria-busy="true"
+          aria-label="Loading, please wait."
+          role="progressbar"
+        ></div>
+      </div>
+    </div>
+    <!-- ./Preloader -->
+
+    <!-- header -->
+    <header class="navbar-fixed-top">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="index.html#education">Eğitim</a></li>
+          <li><a href="index.html#contact">İletişim</a></li>
+          <li><a href="#" class="active">Hakkımda</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ./header -->
+
+    <!-- about -->
+    <div class="section" id="about">
+      <div class="container">
+        <div class="col-md-12">
+          <h1 class="size-50">Hakkımda</h1>
+          <div class="h-50"></div>
+          
+          <div class="col-md-12">
+            <div class="info-section">
+              <!-- Kişisel Bilgiler -->
+              <div class="info-item" data-aos="fade-up">
+                <div class="info-content">
+                  <h3>Kişisel Bilgiler</h3>
+                  <p>
+                    Merhaba, ben Yasin. Sinop Üniversitesi'nde İnternet ve Ağ Teknolojileri bölümünde eğitimime devam ediyorum. 
+                    Teknolojiye olan ilgim sayesinde kendimi yazılım, ağ sistemleri ve web geliştirme alanlarında geliştirmeye çalışıyorum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Eğitim ve Kariyer -->
+              <div class="info-item" data-aos="fade-up" data-aos-delay=".2">
+                <div class="info-content">
+                  <h3>Eğitim ve Kariyer</h3>
+                  <p>
+                    Sinop Üniversitesi'nde eğitim alıyorum ve İnternet ve Ağ Teknolojileri bölümüne yoğunlaşıyorum. 
+                    Eğitim sürecimde birçok proje üzerinde çalışarak teorik bilgiyi pratiğe dökme fırsatı buldum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- İlgi Alanları -->
+              <div class="info-item" data-aos="fade-up" data-aos-delay=".4">
+                <div class="info-content">
+                  <h3>İlgi Alanlarım</h3>
+                  <p>
+                    Yazılım geliştirme, web tasarımı, ağ sistemleri ve otomasyon projeleri üzerinde çalışmayı seviyorum. 
+                    Ayrıca teknoloji trendlerini takip ederek yenilikçi çözümler üretmeye çalışıyorum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Beceriler -->
+              <div class="info-item" data-aos="fade-up" data-aos-delay=".6">
+                <div class="info-content">
+                  <h3>Teknik Beceriler</h3>
+                  <ul>
+                    <li>Web Geliştirme (HTML, CSS, JavaScript)</li>
+                    <li>Ağ Sistemleri ve Yönetimi</li>
+                    <li>Sistem Güvenliği</li>
+                    <li>Veritabanı Yönetimi</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Projeler -->
+              <div class="info-item" data-aos="fade-up" data-aos-delay=".8">
+                <div class="info-content">
+                  <h3>Projeler ve Çalışmalar</h3>
+                  <p>
+                    Eğitim hayatım boyunca çeşitli projeler geliştirdim ve geliştirmeye devam ediyorum. 
+                    Bu projeler arasında web uygulamaları, ağ çözümleri ve sistem güvenliği projeleri bulunmaktadır.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./about -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!--  plugins  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+
+    <!--  main script  -->
+    <script src="js/custom.js"></script>
+
+    <!-- Ana scriptlerden sonra -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('.mobile-nav');
+        const body = document.body;
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Menü linklerine tıklandığında menüyü kapat
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Menü dışına tıklandığında menüyü kapat
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+    });
+    </script>
+  </body>
+</html> 
